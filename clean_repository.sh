@@ -1,1 +1,1 @@
-rm -f ./enumerate_numbers
+rm -f ./guessing_game
