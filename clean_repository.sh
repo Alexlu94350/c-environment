@@ -1,1 +1,1 @@
-rm -f ./a.out
+rm -f ./enumerate_numbers
