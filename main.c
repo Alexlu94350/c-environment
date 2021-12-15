@@ -2,31 +2,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void main(int N)
+void main(int argc, char *argv[])
 
 {
 
     int aleatoire, nombre, maximum = 0;
     
+    int N = atoi(argv[1]);
+
     if (N) {
     
-        maximum = 100;
+        maximum = N;
     
     } else {
     
-        maximum = N;
+        maximum = 100;
         
     }
     
-    aleatoire = rand() % 100+1;
+    aleatoire = rand() % maximum+1;
     
-    printf("I have in mind a number in between 1 and 100, can you find it ?\n");
+    printf("I have in mind a number in between 1 and %d, can you find it ?\n",maximum);
     
     while ( nombre != aleatoire ) {
     
         scanf("%d",&nombre);
         
-        if ( nombre >= 1 && nombre <= 100 ) {
+        if ( nombre >= 1 && nombre <= maximum ) {
         
             if ( nombre < aleatoire ) {
             
@@ -50,5 +52,3 @@ void main(int N)
     printf("You just found the number, it was indeed %d\n",aleatoire);
 
 }
-
-
